@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>VideoRental.Customer</OriginalElement>
+  <nodes>
+    <node x="0.0" y="377.0">VideoRental.Customer</node>
+    <node x="0.0" y="0.0">VideoRental.VRUI</node>
+    <node x="238.0" y="0.0">VideoRental.Video</node>
+    <node x="480.0" y="0.0">VideoRental.Rental</node>
+  </nodes>
+  <notes />
+  <edges />
+  <settings layout="Hierarchic Group" zoom="0.7430340557275542" x="313.0" y="263.0" />
+  <SelectedNodes>
+    <node>VideoRental.VRUI</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+    <Category>Inner Classes</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
