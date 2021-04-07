@@ -2,7 +2,6 @@ package VideoRental;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Date;
 import java.util.List;
 
 public class Customer {
@@ -46,24 +45,22 @@ public class Customer {
 		for (Rental each : rentals) {
 			double eachCharge = 0;
 			int eachPoint = 0 ;
-			int daysRented = 0;
-
-			daysRented = each.getDaysRented();
+			int daysRented = each.getDaysRented();
 
 			switch (each.getVideo().getPriceCode()) {
-			case Video.REGULAR:
+			case VideoVHS.REGULAR:
 				eachCharge += 2;
 				if (daysRented > 2)
 					eachCharge += (daysRented - 2) * 1.5;
 				break;
-			case Video.NEW_RELEASE:
+			case VideoVHS.NEW_RELEASE:
 				eachCharge = daysRented * 3;
 				break;
 			}
 
 			eachPoint++;
 
-			if ((each.getVideo().getPriceCode() == Video.NEW_RELEASE) )
+			if ((each.getVideo().getPriceCode() == VideoVHS.NEW_RELEASE) )
 				eachPoint++;
 
 			if ( daysRented > each.getDaysRentedLimit() )

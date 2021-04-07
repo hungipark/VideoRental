@@ -77,8 +77,8 @@ public class VRManager {
         customers.add(james);
         customers.add(brown);
 
-        Video v1 = new Video("v1", Video.CD, Video.REGULAR, new Date());
-        Video v2 = new Video("v2", Video.DVD, Video.NEW_RELEASE, new Date());
+        Video v1 = VideoFactory.create("v1", VideoType.CD, Video.REGULAR, new Date());
+        Video v2 = VideoFactory.create("v2", VideoType.DVD, Video.NEW_RELEASE, new Date());
         videos.add(v1);
         videos.add(v2);
 
@@ -165,7 +165,7 @@ public class VRManager {
         int priceCode = scanner.nextInt();
 
         Date registeredDate = new Date();
-        Video video = new Video(title, videoType, priceCode, registeredDate);
+        Video video = VideoFactory.create(title, VideoType.getValue(videoType), priceCode, registeredDate);
         videos.add(video);
     }
 }
