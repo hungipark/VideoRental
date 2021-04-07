@@ -131,13 +131,7 @@ public class VRManager {
         System.out.println("Enter video title to rent: ");
         String videoTitle = scanner.next();
 
-        Video foundVideo = null;
-        for (Video video : videos) {
-            if (video.getTitle().equals(videoTitle) && video.isRented() == false) {
-                foundVideo = video;
-                break;
-            }
-        }
+        Video foundVideo = getVideo(videoTitle, false);
 
         if (foundVideo == null) return;
 
@@ -145,6 +139,17 @@ public class VRManager {
         foundVideo.setRented(true);
 
         foundCustomer.addRental(rental);
+    }
+
+    private Video getVideo(String videoTitle, boolean isRented) {
+        Video foundVideo = null;
+        for (Video video : videos) {
+            if (video.getTitle().equals(videoTitle) && video.isRented() == isRented) {
+                foundVideo = video;
+                break;
+            }
+        }
+        return foundVideo;
     }
 
     public void registerCustomer() {
