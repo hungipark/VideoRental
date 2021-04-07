@@ -27,8 +27,7 @@ public class VRManager {
         } else {
             printCustomerInfo(foundCustomer);
 
-            List<Rental> rentals = new ArrayList<Rental>();
-            foundCustomer.setRentals(rentals);
+            foundCustomer.clearRentals();
         }
     }
 
@@ -145,9 +144,7 @@ public class VRManager {
         Rental rental = new Rental(foundVideo);
         foundVideo.setRented(true);
 
-        List<Rental> customerRentals = foundCustomer.getRentals();
-        customerRentals.add(rental);
-        foundCustomer.setRentals(customerRentals);
+        foundCustomer.addRental(rental);
     }
 
     public void registerCustomer() {

@@ -1,6 +1,7 @@
 package VideoRental;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 
@@ -22,11 +23,11 @@ public class Customer {
 	}
 
 	public List<Rental> getRentals() {
-		return rentals;
+		return Collections.unmodifiableList(rentals);
 	}
 
-	public void setRentals(List<Rental> rentals) {
-		this.rentals = rentals;
+	public void clearRentals() {
+		this.rentals = new ArrayList<>();
 	}
 
 	public void addRental(Rental rental) {
