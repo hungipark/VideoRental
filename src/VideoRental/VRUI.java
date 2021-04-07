@@ -14,8 +14,8 @@ public class VRUI {
 				case 0: quit = true ; break ;
 				case 1: vrManager.listCustomers() ; break ;
 				case 2: vrManager.listVideos() ; break ;
-				case 3: vrManager.register("customer") ; break ;
-				case 4: vrManager.register("video") ; break ;
+				case 3: vrManager.registerCustomer() ; break ;
+				case 4: vrManager.registerVideo() ; break ;
 				case 5: vrManager.rentVideo() ; break ;
 				case 6: vrManager.returnVideo() ; break ;
 				case 7: vrManager.getCustomerReport() ; break;
