@@ -11,8 +11,11 @@ public abstract class Video {
     private VideoType videoType ;
     private boolean rented ;
 
-    public Video(Date registeredDate) {
+    public Video(String title, VideoType videoType, int priceCode, Date registeredDate) {
         this.registeredDate = registeredDate ;
+        this.title = title ;
+        this.videoType = videoType ;
+        this.priceCode = priceCode ;
     }
 
     public abstract int getLateReturnPointPenalty();

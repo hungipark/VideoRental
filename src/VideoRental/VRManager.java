@@ -54,7 +54,6 @@ public class VRManager {
         for (Rental rental : customerRentals) {
             if (rental.getVideo().getTitle().equals(videoTitle) && rental.getVideo().isRented()) {
                 rental.returnVideo();
-                rental.getVideo().setRented(false);
                 break;
             }
         }

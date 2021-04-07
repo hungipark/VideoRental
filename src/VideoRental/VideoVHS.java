@@ -5,10 +5,7 @@ import java.util.Date;
 public class VideoVHS extends Video {
 
 	public VideoVHS(String title, VideoType videoType, int priceCode, Date registeredDate) {
-		super(registeredDate);
-		this.setTitle(title) ;
-		this.setVideoType(videoType) ;
-		this.setPriceCode(priceCode) ;
+		super(title, videoType, priceCode, registeredDate);
 	}
 
 	@Override
